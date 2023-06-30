@@ -110,17 +110,17 @@ RCT_EXPORT_MODULE()
     [self endCallScreenLock]; // End the call when the screen is about to lock
 }
 
-// - (void)endCallScreenLock {
-//     #ifdef DEBUG
-//      NSLog(@"[RNCallKeep][endCall]: Lock screen", _currentUUID);
-//     #endif
-//     if(_currentUUID != nil){
-//         NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:_currentUUID];
-//         [RNCallKeep endCallWithUUID: _currentUUID reason: 6];
-//         [self sendEventWithNameWrapper:RNCallKeepPerformEndCallAction body:@{ @"callUUID": uuid }];
-//         _currentUUID = nil;
-//     }
-// }
+- (void)endCallScreenLock {
+    #ifdef DEBUG
+     NSLog(@"[RNCallKeep][endCall]: Lock screen", _currentUUID);
+    #endif
+    // if(_currentUUID != nil){
+    //     NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:_currentUUID];
+    //     [RNCallKeep endCallWithUUID: _currentUUID reason: 6];
+    //     [self sendEventWithNameWrapper:RNCallKeepPerformEndCallAction body:@{ @"callUUID": uuid }];
+    //     _currentUUID = nil;
+    // }
+}
 
 // Override method of RCTEventEmitter
 - (NSArray<NSString *> *)supportedEvents
